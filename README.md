@@ -70,7 +70,7 @@ I *meant* to check that the file built locally - I could have used `jekyll build
 
 `ctrl-c` - stops the local Jekyll server.
 
-At that point I opened FileZilla and FTP-ed the resulting new _site folder's contents to my web host, updating everything in the remote folder,
+At that point I opened FileZilla and FTP-ed the resulting new '_site' folder's contents to my web host, updating everything in the remote folder,
 
 Unfortunately the 'No' post failed to build with a title; so I got my phone out, changed its title in the yaml front matter, and pushed the updated page to GitHub and...
 
