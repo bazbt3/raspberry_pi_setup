@@ -29,11 +29,11 @@ I've needed to install:
 * `Jekyll`, with its dependencies.  The main point of failure throughout this and my previous Everest - `ayadn_shell` - has been Ruby and gem dependencies.  I had a heck of a job trying to get this to work (see below),
 * `FileZilla` - a free and feature-packed FTP client with GUI and command line options.
 
+**Important:**  Along the way (and maybe too late!) I discovered the need to run my Terminal window as login shell - using `/bin/bash --login`.  Typing this at the command line before switching Rubies does the trick where it would otherwise fail, but I need to figure out how to set the thing so that future Terminal windows open with those rights *automatically.*
+
 ## Next steps:
 
 Install `git`.  It may seem odd that I've not already done it by this point.  Well, this is the fifth iteration of my Raspberry Pi setup; I've done it 4 times already.  Slow & sure will win *this* race to the next reset.
-
-**Important:**  Along the way (and maybe too late!) I discovered the need to run my Terminal window as login shell - using `/bin/bash --login`.  Typing this at the command line before switching Rubies does the trick where it would otherwise fail, but I need to figure out how to set the thing so that future Terminal windows open with those rights *automatically.*
 
 ## Incidental:
 
