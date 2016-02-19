@@ -14,7 +14,7 @@ Good question.  Because I paid for the web host I may as well use the space for 
 
 ## How?
 
-In general terms I intend to creat an as-yet-to-be-determined number of shell scripts driven by cron jobs, which:
+In general terms I intend to create an as-yet-to-be-determined number of shell scripts driven by cron jobs, which:
 
 * Use the git command line to pull the blog repo from GitHub,
 * Use the Jekyll static web site generator to build it locally,
@@ -33,6 +33,6 @@ I've needed to install:
 
 ## Incidental:
 
-I was *going* to install the Glynn Ruby gem - which, when run, automatically uploads the contents of the folder it's invoked within to a predetermined location at a remote FTP host.  I didn't use it because in its simplest use case it requires a yaml configuration file within the repo, and I'd still like my blog repo to remain public.
+* I was *going* to install the Glynn Ruby gem - which, when run, automatically uploads the contents of the folder it's invoked within to a predetermined location at a remote FTP host.  I didn't use it because in its simplest use case it requires a yaml configuration file within the repo, and I'd still like my blog repo to remain public.
 
-I don't *yet* wish to pay GitHub for private repos.  I opened a GitLab account and like what I see, especially the free private repos.  There's just not the social dimension to that site (nearly all the people I know who use gituse GitHub) and GitHub has of course gained far better brand awareness.
+* I don't *yet* wish to pay GitHub for private repos.  I opened a GitLab account and like what I see, especially the free private repos.  There's just not the social dimension to that site (nearly all the people I know who use gituse GitHub) and GitHub has of course gained far better brand awareness.
