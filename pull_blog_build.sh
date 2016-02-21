@@ -15,7 +15,7 @@ cd ~\repo
 # Changes the working folder to 'repo' ready for action!
 
 git pull git://github.com/bazbt3/bazbt3.github.io.git
-# To pull down the now up-to-date remote repo contents and merge them with the local stuff.
+# To pull down the up-to-date remote repo contents and merge them with the local stuff.
 # It presupposed that the repo exists locally - something I will ensure before making this live.
 
 cd bazbt3.github.io
