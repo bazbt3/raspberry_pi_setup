@@ -100,3 +100,13 @@ Here's the result:
 **[http://git.bt3.com/](http://git.bt3.com/)**
 
 Tadaa!
+
+## Automation next steps:
+
+To automate this I need to create a Linux shell script.  I've *some* familiarity with the process, but it'll be trial-and-error I'm afraid.  If you want to see more you'll have to look at the files in this repo - of the form `*.sh`.
+
+It's likely I'll create stuff in the following order:
+
+1. Create a first shell script to have `git` to pull the entire contents from the remote repo and over-write what's local (I'll make sure it exists first!), then build the site using `Jekyll`,
+2. Create a second script to `ftp` the files to my web host,
+3. Create 2 `cron` jobs; the first to pull then build the site, the second to ftp it to my web host.
