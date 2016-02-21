@@ -11,17 +11,14 @@
 # Prerequisites:
 # Mentioned in this repo's README.md file.
 
-cd ~/repo
+cd ~/repo/bazbt3.github.io
 # Changes the working folder to 'repo' ready for action!
 
 git pull git://github.com/bazbt3/bazbt3.github.io.git
 # To pull down the up-to-date remote repo contents and merge them with the local stuff.
 # It presupposed that the repo exists locally - something I will ensure before making this live.
 
-cd bazbt3.github.io
-# Changes the working folder to 'bazbt3.github.io', ready for the site to be built.
-
 jekyll build
-# Builds a copy of the site in the '_site' folder.
+# Builds a copy of the site in the '_site' folder.  If it doesn't exist, Jekyll will create it.
 
 # This is the end.  The next step - invoked by a cron job - is ftp-ing the site to my web host.
