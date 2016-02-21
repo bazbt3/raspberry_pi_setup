@@ -9,7 +9,7 @@
 # 
 
 # Prerequisites:
-# Mentioned in this repo's [README.md](README.md) file.
+# Mentioned in this repo's README.md file.
 
 cd ~\repo
 # Changes the working folder to 'repo' ready for action!
