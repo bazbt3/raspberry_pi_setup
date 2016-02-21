@@ -10,6 +10,7 @@
 
 # Prerequisites:
 # Mentioned in this repo's README.md file.
+# Prior to running this I currently need to invoke `/bin/bash --login` to allow Jekyll to run; something I'm hoping the shebang, or a better understanding of Ruby-related stuff will accomplish later.
 
 cd ~/repo/bazbt3.github.io
 # Changes the working folder as required, ready for action!
@@ -18,8 +19,6 @@ cd ~/repo/bazbt3.github.io
 git pull git://github.com/bazbt3/bazbt3.github.io.git
 # To pull down the up-to-date remote repo contents and merge them with the local stuff.
 # It presupposed that the repo exists locally - something I will ensure before making this live.
-
-# At this point I need to invoke `/bin/bash --login` to run the script; something I'm hoping the shebang will accomplish later.
 
 jekyll build
 # Builds a copy of the site in the '_site' folder.  If it doesn't exist, Jekyll will create it.
