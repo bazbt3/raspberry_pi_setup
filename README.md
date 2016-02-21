@@ -14,7 +14,7 @@ Good question.  Because I paid for the web host I may as well use the space for
 
 ## How?
 
-In general terms I intend to create an as-yet-to-be-determined number of shell scripts driven by cron jobs, which:
+In general terms I intend to create an as-yet-to-be-determined number of shell scripts driven by cron jobs (regular timed events), which:
 
 * Use the `git` command line to pull the blog repo from GitHub,
 
@@ -40,7 +40,7 @@ I've needed to install:
 
 * I was *going* to install the `Glynn` Ruby gem - which, when run, automatically uploads the contents of the folder it's invoked within to a predetermined location at a remote FTP host.  I didn't use it because in its simplest use case it requires a yaml configuration file within the repo, and I'd still like my blog repo to remain public.
 
-* I don't *yet* wish to pay GitHub for private repos.  I opened a GitLab account and like what I see, especially the free private repos.  There's just not the social dimension to that site (nearly all the people I know who use gituse GitHub) and GitHub has of course gained far better brand awareness.
+* I don't *yet* wish to pay GitHub for private repos.  I opened a GitLab account and like what I see, especially the free private repos.  There's just not the social dimension to that site (nearly all the people I know who use git use GitHub) and GitHub has of course gained far better brand awareness.
 
 ## Next steps:
 
@@ -52,35 +52,44 @@ It turns out git's already installed!  Woohoo!
 
 I've creaded a 'repo' folder in the root of my user folder.  The site lives in there in a folder about to be created by git (if I read the instructions correctly.)
 
-Here's an approximatin of the commands I used to build a site locally then send it to my web host.  It's all mirrors and black thread right now:
+Here's an approximation of the commands I used to build a site locally then send it to my web host - in the order I ran them, and with the errors I came across.  It's all mirrors and black thread right now:
 
 Open a Terminal window,
 
-`cd repo` - changes the working folder to 'repo' ready for action!
+`cd repo`    
+\# Changes the working folder to 'repo' ready for action!
 
-`git clone git://github.com/bazbt3/bazbt3.github.io.git`- makes a local copy of the remote repo mentioned,
+`git clone git://github.com/bazbt3/bazbt3.github.io.git`    
+\# Makes a local copy of the remote repo mentioned,
 
-`cd bazbt3.github.io` - changes the working folder gain, this time ready for the site to be built,
+`cd bazbt3.github.io`    
+\# Changes the working folder gain, this time ready for the site to be built,
 
-`/bin/bash --login` - creates an environment in which Jekyll will just work,
+`/bin/bash --login`    
+\# Creates an environment in which Jekyll will just work,
 
-`jekyll serve` - builds a copy of the site into a new '_site' folder, then serves it,
+`jekyll serve`    
+\# Builds a copy of the site into a new '_site' folder, then serves it,
 
 I *meant* to check that the file built locally - I could have used `jekyll build` instead - but didn't bother.  Yeah, it bit me quickly.
 
-`ctrl-c` - stops the local Jekyll server.
+`ctrl-c`    
+\# Stops the local Jekyll server.
 
-At that point I opened FileZilla and FTP-ed the resulting new '_site' folder's contents to my web host, updating everything in the remote folder,
+At that point I opened FileZilla and FTP-ed the resulting ***new*** '_site' folder's contents to my web host, updating everything in the remote folder,
 
 Unfortunately the 'No' post failed to build with a title; so I got my phone out, changed its title in the yaml front matter, and pushed the updated page to GitHub and...
 
-`git pull git://github.com/bazbt3/bazbt3.github.io.git` - to pull down the now up-to-date remote repo contents and merge them with the local stuff,
+`git pull git://github.com/bazbt3/bazbt3.github.io.git`    
+\# To pull down the now up-to-date remote repo contents and merge them with the local stuff,
 
-`jekyll serve` - serves the site again,
+`jekyll serve`    
+\# Serves the site again,
 
 This time I checked the local site:
 
-`http://localhost:4000/archive/` - opened in a browser shows the site in all its glory,
+`http://localhost:4000/archive/`    
+\# Opened in a browser shows the site in all its glory,
 
 Success, the errant 'No' post has indeed changed to 'Nope'!
 
