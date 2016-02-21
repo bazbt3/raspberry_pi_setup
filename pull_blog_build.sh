@@ -11,7 +11,7 @@
 # Prerequisites:
 # Mentioned in this repo's README.md file.
 
-cd ~\repo
+cd ~/repo
 # Changes the working folder to 'repo' ready for action!
 
 git pull git://github.com/bazbt3/bazbt3.github.io.git
