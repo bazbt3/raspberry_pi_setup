@@ -13,6 +13,7 @@
 
 cd ~/repo/bazbt3.github.io
 # Changes the working folder to 'repo' ready for action!
+# It'll probably be better to change this to one with my account name, needs a check.
 
 git pull git://github.com/bazbt3/bazbt3.github.io.git
 # To pull down the up-to-date remote repo contents and merge them with the local stuff.
