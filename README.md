@@ -6,7 +6,7 @@ Setting up a Raspberry Pi 2 computer isn't as trivial a task as the world would 
 
 ## What?
 
-My Pi will be used to copy my blog repo from GitHub on a regular basis, build it locally, then FTP the site files to my web host.
+Despite the repo's name, this isn't about setting up a Raspberry Pi 2, it's about setting it up to achieve a very specific goal.  My Pi will be used to copy my blog repo from GitHub on a regular basis, build it locally, then FTP the site files to my web host.
 
 ## Why?
 
@@ -52,7 +52,7 @@ It turns out git's already installed!  Woohoo!
 
 I've creaded a 'repo' folder in the root of my user folder.  The site lives in there in a folder about to be created by git (if I read the instructions correctly.)
 
-Here's an approximation of the commands I used to build a site locally then send it to my web host - in the order I ran them, and with the errors I came across.  It's all mirrors and black thread right now:
+Here's an approximation of the commands I used to build a site locally then send it to my web host - in the order I ran them, and with the errors I came across.  It's all mirrors and black thread right now; don't expect this to work if you try this at *your* home:
 
 Open a Terminal window,
 
