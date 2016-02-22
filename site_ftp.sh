@@ -5,7 +5,7 @@
 # 
 # THIS FILE HAS NOT BEEN TESTED LOCALLY, IT'S A PLACEHOLDER!
 # It's important to note that the file permissions should also be changed to allow execution:
-# `chmod +x pull_blog_build.sh`
+# `chmod +x site_ftp.sh`
 # 
 
 # Prerequisites:
