@@ -4,8 +4,8 @@
 
 # 
 # THIS FILE HAS NOT BEEN TESTED LOCALLY, IT'S A PLACEHOLDER!
-# It's important to note that the file permissions should also be changed to allow execution.
-# It's worked for me in the past, but I'll need a brief refresher before *doing* it.
+# It's important to note that the file permissions should also be changed to allow execution:
+# `chmod +x pull_blog_build.sh`
 # 
 
 # Prerequisites:
