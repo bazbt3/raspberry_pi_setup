@@ -24,7 +24,7 @@ In general terms I intend to create an as-yet-to-be-determined number of shell s
 
 * Use the `Jekyll` static web site generator to build it locally,
 
-* Use the `FileZilla` FTP program - or at least something on the command line again - to upload the entire site (for now) to my web host, over-writing what's there.
+* Use command line FTP client software to upload the entire site (for now) to my web host, over-writing what's there.
 
 ---
 
@@ -38,15 +38,17 @@ I've needed to install:
 
 * `Jekyll`, with its dependencies.  The main point of failure throughout this and my previous Everest - `ayadn_shell` - has been Ruby and gem dependencies.  I had a heck of a job trying to get this to work (see below),
 
-* `FileZilla` - a free and feature-packed FTP client with GUI and command line options.
+* [`NcFTP Client`](http://www.ncftp.com/) - a free and feature-packed command line FTP client.
 
-**Important:**  Along the way (and maybe too late!) I discovered the need to run my Terminal window as login shell - using `/bin/bash --login`.  Typing this at the command line before switching Rubies does the trick where it would otherwise fail, but I need to figure out how to set the thing so that future Terminal windows open with those rights *automatically.*
+**Important:**    
+Along the way (and maybe too late!) I discovered the need to run my Terminal window as login shell - using `/bin/bash --login`.  Typing this at the command line before switching Rubies does the trick where it would otherwise fail, but I need to figure out how to set the thing so that future Terminal windows open with those rights *automatically.*    
+The good thing is, when SSH-ing into the Pi, the shell script commands mentioned later just work.
 
 ---
 
 ## Incidental:
 
-* I was *going* to install the `Glynn` Ruby gem - which, when run, automatically uploads the contents of the folder it's invoked within to a predetermined location at a remote FTP host.  I didn't use it because in its simplest use case it requires a yaml configuration file within the repo, and I'd still like my blog repo to remain public.
+* I was *going* to install the `Glynn` Ruby gem - which, when run, automatically uploads the contents of the folder it's invoked within to a predetermined location at a remote FTP host.  I didn't use it because in its simplest use case it requires a yaml configuration file within the repo, and I'd still like my blog repo to remain public.  **Addendum:** I chose to create a script using plain text username & password anyway, chose to remove the sensitive info. in the file within this repo.
 
 * I don't *yet* wish to pay GitHub for private repos.  I opened a GitLab account and like what I see, especially the free private repos.  There's just not the social dimension to that site (nearly all the people I know who use git use GitHub) and GitHub has of course gained far better brand awareness.
 
@@ -121,10 +123,15 @@ To automate this I need to create a Linux shell script.  I've *some* familiarity
 
 It's likely I'll create stuff in the following order:
 
-1. Create a first shell script to have `git` to pull the entire contents from the remote repo and over-write what's local (I'll make sure it exists first!), then build the site using `Jekyll`,
-2. Create a second script to `ftp` the files to my web host,
-3. Create 2 `cron` jobs; the first to pull then build the site, the second to ftp it to my web host.
+1. **Completed:** Create a first executable shell script to have `git` to pull the entire contents from the remote repo and over-write what's local (I'll make sure it exists first!), then build the site using `Jekyll`,
+2. **Completed:** Create a second executable script to `ftp` the files to my web host,
+3. Create 2 `cron` jobs; the first to pull & build the site, the second to FTP it,
+4. *Later:* Merge the 2 scripts' contents and reduce the cron jobs.
 
 ### 1. Pull the repo, build it locally:
 
-The first file (untested on my machine as of this repo update) [`pull_blog_build.sh`](pull_blog_build.sh) - in this repo.
+The first file - [`pull_blog_build.sh`](pull_blog_build.sh) - is now in this repo.
+
+### 2. FTP the file to the web host root:
+
+The second file - a security-sanitised version of my local [`site_ftp.sh`](site_ftp.sh) - is now in this repo.
