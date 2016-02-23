@@ -3,9 +3,8 @@
 # In the past I've used `#!/bin/bash` but I've been reading since.
 
 # 
-# THIS FILE HAS NOT BEEN TESTED LOCALLY, IT'S A PLACEHOLDER!
 # It's important to note that the file permissions should also be changed to allow execution:
-# `chmod +x site_ftp.sh`
+# `chmod +x pull_blog_build.sh`
 # 
 
 # Prerequisites:
@@ -18,8 +17,8 @@
 # The 'home/pi/repo/bazbt3.github.io/_site' folder is entirely local to my Raspberry Pi, thus 'safe'.
 # FYI 'Pi' is the default username for a new Pi.
 
-ncftpput -R -v -u "username@domain.tld" -p "password" ftp.domain.tld / /home/pi/repo/bazbt3.github.io/_site
-# Recursively upload the contents of the repo's site folder to the web root of my blog subdomain.
+ncftpput -R -v -u "username@domain.tld" -p "password" ftp.domain.tld / /home/pi/repo/bazbt3.github.io/_site/*
+# Recursively upload the contents of the repo's _site folder to the web root of my git.bt3.com subdomain.
 
 # Where:
 # ncftpput : a component of the Linux 'ncftp' command line ftp program,
@@ -28,8 +27,8 @@ ncftpput -R -v -u "username@domain.tld" -p "password" ftp.domain.tld / /home/pi/
 # -u "username" : Ftp server username,
 # -p "password" : Ftp server password,
 # ftp.domain.tld : Remote ftp server (use FQDN or IP),
-# /remote/directory : Remote ftp server directory where all files and subdirectories will be uploaded,
+# / : Remote ftp server directory where all files and subdirectories will be uploaded,
 # /local/directory : Local directory (or list of files) to upload to the remote server.
 
-# Instructions, slightly edited, from:
+# Instructions from:
 # http://www.cyberciti.biz/tips/linux-upload-the-files-and-directory-tree-to-remote-ftp-server.html
