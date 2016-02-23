@@ -15,9 +15,10 @@
 # The following command should only be used as a starting point.
 # It entirely avoids common-sense security, containing username & password in plain view!
 # I've therefore replaced any sensitive text before the first GitHub commit.
-# The '~/repo/bazbt3.github.io/_site' folder is entirely local to my Raspberry Pi, thus 'safe'.
+# The 'home/pi/repo/bazbt3.github.io/_site' folder is entirely local to my Raspberry Pi, thus 'safe'.
+# FYI 'Pi' is the default username for a new Pi.
 
-ncftpput -R -v -u "username@domain.tld" -p "password" ftp.domain.tld / ~/repo/bazbt3.github.io/_site
+ncftpput -R -v -u "username@domain.tld" -p "password" ftp.domain.tld / /home/pi/repo/bazbt3.github.io/_site
 # Recursively upload the contents of the repo's site folder to the web root of my blog subdomain.
 
 # Where:
