@@ -38,7 +38,7 @@ I've needed to install:
 
 * `Jekyll`, with its dependencies.  The main point of failure throughout this and my previous Everest - `ayadn_shell` - has been Ruby and gem dependencies.  I had a heck of a job trying to get this to work (see below),
 
-* [`NcFTP Client`](http://www.ncftp.com/) - a free and feature-packed command line FTP client.
+* [`NcFTP Client`](http://www.ncftp.com/) - a free and feature-packed command line FTP client.  This replaces 'FileZilla' (an *excellent* GUI *and* command-line client) in my workflow.
 
 **Important:**    
 Along the way (and maybe too late!) I discovered the need to run my Terminal window as login shell - using `/bin/bash --login`.  Typing this at the command line before switching Rubies does the trick where it would otherwise fail, but I need to figure out how to set the thing so that future Terminal windows open with those rights *automatically.*    
@@ -117,16 +117,16 @@ Tadaa!
 
 ---
 
-## Automation next steps:
+## Automation first steps:
 
-To automate this I need to create a Linux shell script.  I've *some* familiarity with the process, but it'll be trial-and-error I'm afraid.  If you want to see more you'll have to look at the files in this repo - of the form `*.sh`.
+To automate this I needed to create a Linux shell script.  I've *some* familiarity with the process, but it was trial-and-error I'm afraid.  If you want to see more you'll have to look at the files in this repo - of the form `*.sh`.
 
-It's likely I'll create stuff in the following order:
+I created stuff in the following order:
 
 1. **Completed:** Create a first executable shell script to have `git` to pull the entire contents from the remote repo and over-write what's local (I'll make sure it exists first!), then build the site using `Jekyll`,
 2. **Completed:** Create a second executable script to `ftp` the files to my web host,
-3. Create 2 `cron` jobs; the first to pull & build the site, the second to FTP it,
-4. *Later:* Merge the 2 scripts' contents and reduce the cron jobs.
+3. **Completed:** Create 2 `cron` jobs; the first to pull & build the site, the second to FTP it,
+4. *Later:* Merge the 2 scripts' contents and reduce the cron jobs & their frequency of operation.
 
 ### 1. Pull the repo, build it locally:
 
@@ -135,3 +135,7 @@ The first file - [`pull_blog_build.sh`](pull_blog_build.sh) - is now in this rep
 ### 2. FTP the file to the web host root:
 
 The second file - a security-sanitised version of my local [`site_ftp.sh`](site_ftp.sh) - is now in this repo.
+
+### 3. Run both commands to a schedule:
+
+I've now automated the routine - see [crontab.md](crontab.md).  There's no intelligence to it; I'm oblivious at this stage to what will happen if one or both commands fail at any stage.
