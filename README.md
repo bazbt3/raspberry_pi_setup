@@ -140,6 +140,8 @@ The second file - a security-sanitised version of my local [`site_ftp.sh`](site_
 
 I've now automated the routine - see [crontab.md](crontab.md).  There's no intelligence to it; I'm oblivious at this stage to what will happen if one or both commands fail at any stage.
 
+---
+
 ## Security next step:
 
 There is essentially zero security in having a username and password hard-coded into a plain text file.  SSH and SCP has to be the way to go.  There's a too-large learning curve for me there right now.
