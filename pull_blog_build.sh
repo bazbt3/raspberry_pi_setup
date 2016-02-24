@@ -12,6 +12,9 @@
 # Mentioned in this repo's README.md file.
 # Prior to running this I currently need to invoke `/bin/bash --login` to allow Jekyll to run; something I'm hoping the shebang, or a better understanding of Ruby-related stuff will accomplish later.
 
+source /home/pi/.rvm/environments/ruby-2.2.1
+# Loads RVM Ruby.
+
 cd ~/repo/bazbt3.github.io
 # Changes the working folder as required, ready for action!
 # It'll probably be better to change this to one with my account name, needs a check.
