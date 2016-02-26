@@ -19,7 +19,7 @@ Open a Terminal window,
 \# Makes a local copy of the remote repo mentioned,
 
 `cd bazbt3.github.io`    
-\# Changes the working folder gain, this time ready for the site to be built,
+\# Changes the working folder again, this time ready for the site to be built,
 
 `/bin/bash --login`    
 \# Creates an environment in which Jekyll will just work,
