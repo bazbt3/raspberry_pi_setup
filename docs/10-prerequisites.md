@@ -2,9 +2,11 @@
 
 ## Prerequisites:
 
+I'm pretty sure a computer running any Linux variant (including Mac OS X) will be capable of running this.  It is, after all, pretty basic.
+
 I've needed to install:
 
-* `RVM` - a Ruby version manager - to get the stuff that Ruby needs working correctly.  RVM installs on a per-user basis, though there may indeed by system-wide options (see below for an important caveat),
+* `RVM` - a Ruby version manager - to get the stuff that Ruby needs working correctly.  RVM installs on a per-user basis, though there may indeed by system-wide options (see below for an important caveat.)  'rbenv' is an alternative - one which I and others have had success with where RVM has failed.
 
 * `Rubygems` - to allow Ruby gems to run,
 
