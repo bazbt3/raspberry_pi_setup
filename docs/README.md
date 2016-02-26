@@ -13,3 +13,4 @@ Shell scripts driven by cron jobs (regular timed events), which:
 * [The prerequisites](10-prerequisites.md) - What's necessary to get this to work.
 * [The creation of the commands](20-commands.md) - This will be obsolete; the files have internal doumentation.
 * [Automating it all](30-automation.md) - Cron jobs are surprisingly easy to get right.
+* [Future improvements](90-roadmap.md) - How this could be improved, what I'm capable of...
