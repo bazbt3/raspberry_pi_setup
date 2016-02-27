@@ -4,7 +4,7 @@
 
 ### Merge the 2 scripts' contents and reduce the cron jobs & their frequency of operation.
 
-Currently all this is activated - in theory - every 3 hours, every day. *Though it's not going to add a massive load to my internet connection or max-out my web hosting bandwidth it's inefficient.*
+Currently all this is activated - in theory - every 4 hours, every day. *Though it's not going to add a massive load to my internet connection or max-out my web hosting bandwidth it's inefficient.*
 
 > **Stupid was in da house!**
 
