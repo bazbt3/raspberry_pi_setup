@@ -4,7 +4,9 @@
 
 ### Merge the 2 scripts' contents and reduce the cron jobs & their frequency of operation.
 
-Currently all this is activated - in theory - once an hour, every hour between 07:00 and 23:00, and every day. Though it's not going to add a massive load to my internet connection or max-out my web hosting bandwidth it's inefficient.
+Currently all this is activated - in theory - every 3 hours, every day. *Though it's not going to add a massive load to my internet connection or max-out my web hosting bandwidth it's inefficient.*
+
+> **Stupid was in da house!**
 
 At this point my enthusiasm overrode any logic still remaining.  The files uploading 15 times a day for 30 days a month would have maxed out my web host bandwidth 6 times over.  Be careful when you calculate your requirements.  Better-still, investigate incremental automation.
 
